@@ -1,0 +1,20 @@
+---
+tags: []
+---
+:toc:
+:icons: font
+:source-highlighter: prettify
+:project_id: pat-external-configuration
+This pattern describes how to architect a centralized configuration for your application, which is external from the deployment package.
+
+== Problem
+
+Content does not yet exist for any patterns, but content is required to build and prove the processing and presentation of the Cosmos application.
+
+== Solution
+
+Create a pattern document containing fake information that stands in for real content.
+
+== Consequences
+
+The existence of content, whether actual or fake, will enable work to continue around pattern documents.
