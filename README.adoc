@@ -9,7 +9,11 @@ This pattern describes how to architect a centralized configuration for your app
 
 == Problem
 
-Content does not yet exist for any patterns, but content is required to build and prove the processing and presentation of the Cosmos application.
+Some form of configuration is required by most production applications. Often, this configuration is deployed in the root of the application as a file or group of files which contain environment specific settings or profile information such as database connection credentials, third party API access tokens, environment specific URLs, etc.
+
+A local configuration may require application downtime when publishing an updated configuration. Additionally, a local configuration cannot be used by multiple application instances. There is also a challenge of versioning a local configuration, which may require manual management.
+
+Synchronizing configuration across multiple application instances or environments can be problematic. Instances may be using different configuration while the update is progressing. And there is always a risk of an instance not receiving an updated configuration.
 
 == Solution
 
