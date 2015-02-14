@@ -23,6 +23,4 @@ The Pivotal Cloud Foundry Marketplace offers the _Config Server for Pivotal CF_ 
 
 image::images/diagram.png[Config Server Service]
 
-== Consequences
-
-The existence of content, whether actual or fake, will enable work to continue around pattern documents.
+This diagram illustrates a deployment with three app instances configured to utilize a configuration server, which in turn is configured to read configuration from an external Git repository. The app instances and configuration server are all deployed within Pivotal Cloud Foundry.
