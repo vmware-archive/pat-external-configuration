@@ -19,7 +19,9 @@ Synchronizing configuration across multiple application instances or environment
 
 The solution to each of the described problems is to store the configuration in an external location that supports versioning. By doing this, all application instances can utilize the same configuration, downtime is limited, and synchronization is no longer a risk.
 
-The Pivotal Cloud Foundry Marketplace offers the _Config Server for Pivotal CF_ as a service for providing externalized configuration to your applications running on PCF. The Config Server provides an HTTP, resource-based API for external configuration. The recommended location for the configuration is a Git repository. The URI of the Git repository is required to complete the setup of the Config Server service, and it then propegates the resolved configuration to the associated client applications. The expected configuration is in the form of name-value pairs, or equivalent YAML content.
+The Pivotal Cloud Foundry Marketplace offers the _Config Server for Pivotal CF_ as a service for providing externalized configuration to your applications running on PCF. The Config Server provides an HTTP, resource-based API for external configuration. The recommended location for the configuration is a Git repository. The URI of the Git repository is required to complete the setup of the Config Server service. It then propegates the resolved configuration to the associated client applications. The expected configuration is in the form of name-value pairs, or equivalent YAML content.
+
+image::images/diagram.png[Config Server Service]
 
 == Consequences
 
