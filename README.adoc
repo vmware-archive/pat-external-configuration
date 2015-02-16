@@ -24,3 +24,14 @@ The Pivotal Cloud Foundry Marketplace offers the _Config Server for Pivotal CF_ 
 image::images/diagram.png[Config Server Service]
 
 This diagram illustrates a deployment with three app instances configured to utilize a configuration server, which in turn is configured to read configuration from an external Git repository. The app instances and configuration server are all deployed within Pivotal Cloud Foundry.
+
+== Usage Scenarios
+
+The following list contains some examples regarding when to use the external configuration pattern:
+
+* Multiple applications or instances share configuration
+* DevOps team needs to change logging levels of a running application in order to debug a production issue
+* DevOps team needs to quickly change the number of threads receiving messages from a message broker
+* DevOps team needs to update the URL of a SaaS web service due to an outage or change in environment
+* DevOps team is required to produce a report of all the configuration changes that have been made to the production system in order to support Sarbanes-Oxley auditing
+* DevOps wants to be able toggle features on/off in a running application
