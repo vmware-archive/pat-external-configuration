@@ -40,8 +40,8 @@ Consider the following issues when using the external configuration pattern:
 The following list contains some examples regarding when to use the external configuration pattern:
 
 * Multiple applications or instances share configuration.
-* DevOps team needs to change logging levels of a running application in order to debug a production issue.
-* DevOps team needs to quickly change the number of threads receiving messages from a message broker.
-* DevOps team needs to update the URL of a SaaS web service due to an outage or change in environment.
-* DevOps team is required to produce a report of all the configuration changes that have been made to the production system in order to support Sarbanes-Oxley auditing.
-* DevOps wants to be able toggle features on/off in a running application.
+* Operations team needs to change logging levels of a running application in order to debug a production issue.
+* Operations team needs to quickly change the number of threads receiving messages from a message broker.
+* Operations team needs to update the URL of a SaaS web service due to an outage or change in environment.
+* Operations team is required to produce a report of all the configuration changes that have been made to the production system in order to support Sarbanes-Oxley auditing.
+* Operations wants to be able toggle features on/off in a running application.
