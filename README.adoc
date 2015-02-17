@@ -25,13 +25,23 @@ image::images/diagram.png[Config Server Service]
 
 This diagram illustrates a deployment with three app instances configured to utilize a configuration server, which in turn is configured to read configuration from an external Git repository. The app instances and configuration server are all deployed within Pivotal Cloud Foundry.
 
+== Considerations
+
+Consider the following issues when using the external configuration pattern:
+
+* The external Git repository should be highly available to the Config Server. Regardless of whether the Config Server caches the configuration, the server hosting the git repository should be performant and available.
+* The backing store supports name-value pairs from properties files or YAML content. This provides for a flexible and extensible configuration schema.
+* Understand and test situations where the configuration may contain errors or is missing required information.
+* Limit who has access to make configuration changes. These changes can have a major impact on application stability and security, and it is prudent to establish procedures and protocols for making additions and changes.
+* All associated apps will receive configuration changes when introduced. This means there is a risk that a configuration change may have unintended effects on one or more applications.
+
 == Usage Scenarios
 
 The following list contains some examples regarding when to use the external configuration pattern:
 
-* Multiple applications or instances share configuration
-* DevOps team needs to change logging levels of a running application in order to debug a production issue
-* DevOps team needs to quickly change the number of threads receiving messages from a message broker
-* DevOps team needs to update the URL of a SaaS web service due to an outage or change in environment
-* DevOps team is required to produce a report of all the configuration changes that have been made to the production system in order to support Sarbanes-Oxley auditing
-* DevOps wants to be able toggle features on/off in a running application
+* Multiple applications or instances share configuration.
+* DevOps team needs to change logging levels of a running application in order to debug a production issue.
+* DevOps team needs to quickly change the number of threads receiving messages from a message broker.
+* DevOps team needs to update the URL of a SaaS web service due to an outage or change in environment.
+* DevOps team is required to produce a report of all the configuration changes that have been made to the production system in order to support Sarbanes-Oxley auditing.
+* DevOps wants to be able toggle features on/off in a running application.
